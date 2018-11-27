@@ -1,7 +1,7 @@
 {
-  "name": "draftkings_chrome_extension",
+  "name": "draftkings-chrome-extension",
   "version": "0.0.0-development",
-  "description": "Draftkings Chrome Extension",
+  "description": "DraftKings Chrome Extension",
   "main": "index.js",
   "scripts": {
     "build": "rm -rf build && webpack --mode=development",
@@ -22,7 +22,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jaebradley/streamable-shortcuts-extension.git"
+    "url": "https://github.com/jaebradley/draftkings-chrome-extension.git"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.5",
@@ -55,7 +55,6 @@
   "dependencies": {
     "axios": "^0.18.0",
     "cheerio": "^1.0.0-rc.2",
-    "element-ready": "^3.0.0",
-    "retryer": "^1.1.2"
+    "element-ready": "^3.0.0"
   }
 }
