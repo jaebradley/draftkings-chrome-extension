@@ -6,7 +6,7 @@
 	"manifest_version": 2,
 	"minimum_chrome_version": "58",
 	"permissions": [
-		"*://draftkings.com/*",
+		"*://draftkings.com/lobby*",
 		"tabs",
 		"webNavigation"
 	],
@@ -22,18 +22,13 @@
 	},
 	"content_scripts": [
 		{
-			"run_at": "document_start",
+			"run_at": "document_end",
 			"matches": [
-				"*://draftings.com/lobby*"
+				"*://www.draftkings.com/lobby*"
 			],
 			"js": [
 				"content.js"
 			]
 		}
-	],
-	"icons": {
-		"16": "16.png",
-		"48": "48.png",
-		"128": "128.png"
-	}
+	]
 }
