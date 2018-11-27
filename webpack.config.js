@@ -7,7 +7,6 @@ module.exports = {
   entry: {
     content: './source/content',
     background: './source/background',
-    shortcuts: './source/shortcuts',
   },
   output: {
     path: path.join(__dirname, 'build'),
