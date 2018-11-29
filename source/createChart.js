@@ -51,7 +51,7 @@ const createChart = ({ canvas, aggregatedContestUsers }) => {
         text: 'Entrants (that DK publicly exposes) by Badge Level',
       },
       scales: {
-        yAxes: [
+        xAxes: [
           {
             ticks: {
               beginAtZero: true,

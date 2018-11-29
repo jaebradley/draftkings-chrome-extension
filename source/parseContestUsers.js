@@ -13,11 +13,21 @@ import {
 
 const parseContestUsers = (content) => {
   const $ = cheerio.load(`<table>${content}</table>`);
-  return $('td').map((_, el) => ({
-    user: $(el).find('span[class="entrant-username"]').text(),
-    experience: EXPERIENCE_CLASS_NAME_TO_EXPERIENCE_LEVEL[$(el).find('span[title="Experience Badge"]').attr('class')]
-                || EXPERIENCE_LEVELS.NO_LEVEL,
-  })).toArray();
+  const users = [];
+
+  $('td').each((_, el) => {
+    const username = $(el).find('span[class="entrant-username"]').text();
+
+    if (username) {
+      users.push({
+        user: username,
+        experience: EXPERIENCE_CLASS_NAME_TO_EXPERIENCE_LEVEL[$(el).find('span[title="Experience Badge"]').attr('class')]
+                    || EXPERIENCE_LEVELS.NO_LEVEL,
+      });
+    }
+  });
+
+  return users;
 };
 
 export default parseContestUsers;

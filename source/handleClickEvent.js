@@ -54,8 +54,7 @@ const createIconAndTooltip = async () => {
 
 const handleClickEvent = async (event) => {
   const contestCells = Array.prototype.slice.call(document.querySelectorAll('.slick-cell'));
-  const isAContestCellClick = contestCells.includes(event.target.parentElement)
-    || contestCells.includes(event.target.parentElement.parentElement);
+  const isAContestCellClick = contestCells.some(cell => cell.contains(event.target));
 
   if (isAContestCellClick) {
     await Promise.all([
