@@ -41,12 +41,15 @@
     "chrome-webstore-upload-cli": "^1.2.0",
     "codecov": "^3.1.0",
     "copy-webpack-plugin": "^4.6.0",
+    "css-loader": "^1.0.1",
     "eslint": "^5.9.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.14.0",
+    "fs-extra": "^7.0.1",
     "husky": "^1.2.0",
     "jest": "^23.6.0",
     "semantic-release": "^15.12.1",
+    "style-loader": "^0.23.1",
     "travis-deploy-once": "^5.0.9",
     "uglifyjs-webpack-plugin": "^2.0.1",
     "webpack": "^4.26.0",
@@ -54,7 +57,9 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "chart.js": "^2.7.3",
     "cheerio": "^1.0.0-rc.2",
-    "element-ready": "^3.0.0"
+    "element-ready": "^3.0.0",
+    "tippy.js": "^3.2.0"
   }
 }

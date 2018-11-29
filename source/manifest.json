@@ -1,0 +1,37 @@
+{
+	"name": "DraftKings Chrome Extension",
+	"version": "1.0.0",
+	"description": "DraftKings Chrome Extension",
+	"homepage_url": "https://github.com/jaebradley/draftkings-chrome-extension",
+	"manifest_version": 2,
+	"minimum_chrome_version": "58",
+	"permissions": [
+		"*://draftkings.com/lobby*",
+		"tabs",
+		"webNavigation"
+	],
+	"optional_permissions": [
+		"http://*/*",
+		"https://*/*"
+	],
+	"background": {
+		"scripts": [
+			"background.js"
+		],
+		"persistent": false
+	},
+	"content_scripts": [
+		{
+			"run_at": "document_end",
+			"matches": [
+				"*://www.draftkings.com/lobby*"
+			],
+			"js": [
+				"content.js"
+			]
+		}
+  ],
+  "web_accessible_resources": [
+    "info.svg"
+  ]
+}
