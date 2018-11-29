@@ -10,7 +10,7 @@ const setup = async () => {
     // Get the contest id from slick-cell l7 r7
     // Append an icon as sibling of l5 r5 with an
     // on click that displays ratio of experienced players
-    appendIcons();
+    await appendIcons();
     return null;
   } catch (e) {
     console.error('DraftKings Extension error: ', e);
