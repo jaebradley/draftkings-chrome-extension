@@ -21,6 +21,6 @@ describe('parseContestUsers', () => {
       EXPERIENCE_LEVELS.ENTERED_AT_LEAST_1000_CONTESTS_AND_BIG_WIN,
     );
     const dfisher928 = users[3];
-    expect(dfisher928).toEqual({ user: 'dfisher928', experience: undefined });
+    expect(dfisher928).toEqual({ user: 'dfisher928', experience: EXPERIENCE_LEVELS.NO_LEVEL });
   });
 });
