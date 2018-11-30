@@ -3,6 +3,10 @@
   "version": "0.0.0-development",
   "description": "DraftKings Chrome Extension",
   "main": "index.js",
+  "engines": {
+    "node": "10.14.1",
+    "npm": "6.4.1"
+  },
   "scripts": {
     "build:dev": "NODE_ENV=development node_modules/.bin/webpack --config configs/webpack.config.development.js",
     "build:prod": "NODE_ENV=production node_modules/.bin/webpack --config configs/webpack.config.production.js",
