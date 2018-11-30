@@ -1,15 +1,20 @@
-const path = require('path');
-const webpack = require('webpack');
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+
+const {
+  BASE_DIRECTORY,
+  OUTPUT_DIRECTORY_NAME,
+  OUTPUT_PATH,
+  ENTRY_FILE_PATHS,
+} = require('./constants');
 
 module.exports = {
   entry: {
-    content: './source/content',
-    background: './source/background',
+    content: ENTRY_FILE_PATHS.CONTENT,
+    background: ENTRY_FILE_PATHS.BACKGROUND,
   },
   output: {
-    path: path.join(__dirname, 'build'),
+    path: OUTPUT_PATH,
     filename: '[name].js',
   },
   module: {
@@ -26,19 +31,20 @@ module.exports = {
     ],
   },
   plugins: [
-    new webpack.optimize.ModuleConcatenationPlugin(),
+    new CleanWebpackPlugin(
+      [
+        OUTPUT_DIRECTORY_NAME,
+      ],
+      {
+        root: BASE_DIRECTORY,
+      },
+    ),
     new CopyWebpackPlugin([
       {
         from: '*',
         context: 'source',
-        ignore: '*.js',
+        ignore: ['*.js', '*.test.*'],
       },
     ]),
   ],
 };
-
-if (process.env.NODE_ENV === 'production') {
-  module.exports.plugins.push(new UglifyJSPlugin());
-} else {
-  module.exports.devtool = 'source-map';
-}
