@@ -13,11 +13,10 @@
     "clear-cache": "rm -rf ./node_modules/.cache/hard-source",
     "clear-everything": "npm run clear-cache && ./node_modules/.bin/rimraf ./node_modules",
     "codecov": "codecov",
-    "commitmsg": "commitlint -e $GIT_PARAMS",
     "fresh-start": "npm run clear-everything && npm install",
-    "lint": "./node_modules/.bin/eslint src/",
+    "lint": "./node_modules/.bin/eslint source/",
     "semantic-release": "semantic-release",
-    "test": "./node_modules/.bin/jest --coverage --passWithNoTests",
+    "test": "./node_modules/.bin/jest --coverage",
     "travis-deploy-once": "travis-deploy-once"
   },
   "keywords": [
