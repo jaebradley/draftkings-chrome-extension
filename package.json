@@ -14,7 +14,7 @@
     "clear-everything": "npm run clear-cache && ./node_modules/.bin/rimraf ./node_modules",
     "codecov": "codecov",
     "fresh-start": "npm run clear-everything && npm install",
-    "lint": "./node_modules/.bin/eslint src/",
+    "lint": "./node_modules/.bin/eslint source/",
     "semantic-release": "semantic-release",
     "test": "./node_modules/.bin/jest --coverage --passWithNoTests",
     "travis-deploy-once": "travis-deploy-once"
