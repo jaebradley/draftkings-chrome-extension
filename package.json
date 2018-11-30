@@ -16,7 +16,7 @@
     "fresh-start": "npm run clear-everything && npm install",
     "lint": "./node_modules/.bin/eslint source/",
     "semantic-release": "semantic-release",
-    "test": "./node_modules/.bin/jest --coverage --passWithNoTests",
+    "test": "./node_modules/.bin/jest --coverage",
     "travis-deploy-once": "travis-deploy-once"
   },
   "keywords": [
