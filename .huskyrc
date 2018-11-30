@@ -1,0 +1,6 @@
+{
+  "hooks": {
+    "commit-msg": "./node_modules/.bin/commitlint -e $GIT_PARAMS",
+    "pre-push": "npm run lint && npm run test"
+  }
+}
