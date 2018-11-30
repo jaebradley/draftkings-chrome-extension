@@ -29,13 +29,23 @@ const createCanvas = () => {
 };
 
 const createIconAndTooltip = async () => {
-  const contestId = document.querySelector(`#${CONTEST_DETAILS_MODAL_ID}`).getAttribute('data-contest-id');
-  const contestUsers = await getContestUsers({ contestId });
-  const aggregatedContestUsers = aggregateContestUsersByExperience(contestUsers);
-
   const icon = createIcon();
   const entrantsLabel = document.querySelector(ENTRANTS_LABEL_SELECTOR);
   entrantsLabel.insertAdjacentElement('afterend', icon);
+
+  const contestId = document.querySelector(`#${CONTEST_DETAILS_MODAL_ID}`).getAttribute('data-contest-id');
+  let contestUsers;
+  try {
+    contestUsers = await getContestUsers({ contestId });
+  } catch (e) {
+    tippy(icon, {
+      content: 'Whoops! Unable to load contest users 😭',
+      size: 'large',
+      theme: 'light',
+    });
+    return null;
+  }
+  const aggregatedContestUsers = aggregateContestUsersByExperience(contestUsers);
 
   const canvas = createCanvas();
   entrantsLabel.insertAdjacentElement('beforebegin', canvas);
@@ -50,6 +60,8 @@ const createIconAndTooltip = async () => {
     sticky: true,
     theme: 'light',
   });
+
+  return null;
 };
 
 const handleClickEvent = async (event) => {
