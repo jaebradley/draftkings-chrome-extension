@@ -14,7 +14,7 @@ const ENTRANTS_LABEL_SELECTOR = 'div.dk-black-rounded-panel.entrants-list > labe
 const createIcon = () => {
   const icon = document.createElement('img');
   icon.id = ICON_ID;
-  icon.src = global.chrome.extension.getURL('./info.svg');
+  icon.src = global.chrome.extension.getURL('./icons/info.svg');
   icon.setAttribute('style', 'max-height: 20px; padding-left: 5px; vertical-align: sub');
   return icon;
 };
