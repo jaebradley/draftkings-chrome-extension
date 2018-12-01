@@ -41,9 +41,12 @@ module.exports = {
     ),
     new CopyWebpackPlugin([
       {
-        from: '*',
-        context: 'source',
-        ignore: ['*.js', '*.test.*'],
+        from: 'source/manifest.json',
+      },
+      {
+        from: 'source/icons',
+        to: 'icons',
+        toType: 'dir',
       },
     ]),
   ],
