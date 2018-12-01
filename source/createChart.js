@@ -48,7 +48,7 @@ const createChart = ({ canvas, aggregatedContestUsers }) => {
     options: {
       title: {
         display: true,
-        text: 'Entrants (that DK publicly exposes) by Badge Level',
+        text: 'Entrants (that DK let\'s you see) by Badge Level',
       },
       scales: {
         xAxes: [
