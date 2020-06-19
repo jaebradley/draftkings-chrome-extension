@@ -71,6 +71,6 @@
     "chart.js": "^2.9.3",
     "cheerio": "^1.0.0-rc.2",
     "element-ready": "^3.1.0",
-    "tippy.js": "^3.2.0"
+    "tippy.js": "^3.4.1"
   }
 }
