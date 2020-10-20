@@ -68,7 +68,7 @@
   },
   "dependencies": {
     "axios": "^0.19.2",
-    "chart.js": "^2.9.3",
+    "chart.js": "^2.9.4",
     "cheerio": "^1.0.0-rc.2",
     "element-ready": "^3.1.0",
     "tippy.js": "^3.4.1"
