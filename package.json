@@ -55,7 +55,7 @@
     "hard-source-webpack-plugin": "^0.12.0",
     "husky": "^1.2.0",
     "jest": "^23.6.0",
-    "semantic-release": "^15.12.1",
+    "semantic-release": "^17.2.3",
     "style-loader": "^0.23.1",
     "travis-deploy-once": "^5.0.9",
     "uglifyjs-webpack-plugin": "^2.0.1",
