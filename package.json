@@ -67,7 +67,7 @@
     "webpack-merge": "^4.1.4"
   },
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.20.0",
     "chart.js": "^2.9.3",
     "cheerio": "^1.0.0-rc.2",
     "element-ready": "^3.1.0",
